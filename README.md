@@ -4,7 +4,7 @@
 
 ## 使用前
 
-1. 按 [POWER-AUTOMATE.md](POWER-AUTOMATE.md) 建好流程。
+1. 建好接收上传的 Power Automate 流程。
 2. 把流程的 HTTP POST URL 填进 [config.js](config.js) 的 `flowUrl`。
 3. 让 `config.js` 里的分类 `id` 和流程里的 Switch 一致。
 4. 仓库 Settings → Pages → 从 `main` 分支的根目录发布。
