@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Excel 上传</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">外部提交</p>
+      <h1>上传 Excel</h1>
+      <p class="lede">
+        选择分类、留下邮箱，并输入接收方提供的上传口令。提交后页面会跳转到处理结果。
+      </p>
+
+      <noscript>请启用浏览器的 JavaScript 后再提交。</noscript>
+      <form id="upload-form">
+        <label>
+          Excel 文件
+          <input
+            id="file"
+            name="file"
+            type="file"
+            accept=".xlsx,.xls,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            required
+          />
+        </label>
+        <p id="file-meta" class="meta"></p>
+
+        <label>
+          分类
+          <select id="category" name="category" required>
+            <option value="">请选择</option>
+          </select>
+        </label>
+
+        <label>
+          你的邮箱
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="name@example.com"
+            required
+          />
+        </label>
+
+        <label>
+          上传口令
+          <input
+            id="upload-key"
+            name="uploadKey"
+            type="password"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          />
+        </label>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <button id="submit" type="submit">提交</button>
+      </form>
+    </main>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
